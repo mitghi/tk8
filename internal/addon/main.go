@@ -10,8 +10,7 @@ import (
 	"github.com/kubernauts/tk8/pkg/common"
 )
 
-type Addon struct {
-}
+// SECTION: Globals.
 
 func (a *Addon) Create(addonName string) (error, string) {
 	cloneExample(addonName)
@@ -84,8 +83,7 @@ func (a *Addon) Install(addonNameOrGitPath string, scope string) {
 	}
 }
 
-// KubeConfig provide the path to the local kube config
-var KubeConfig string
+// SECTION: Locals.
 
 func applyMainYml(addonName string) error {
 
